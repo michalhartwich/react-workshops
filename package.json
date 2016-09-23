@@ -1,0 +1,77 @@
+{
+  "private": true,
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "./app/react/test-helpers.js"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-eslint": "^6.1.0",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.5.1",
+    "cheerio": "^0.20.0",
+    "enzyme": "^2.4.1",
+    "eslint": "^2.13.0",
+    "eslint-plugin-react": "^5.2.0",
+    "expect": "^1.20.0",
+    "jsdom": "^9.5.0",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.0",
+    "karma-sinon": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.5.0",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dispatch": "^2.2.0",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
+    "redux-devtools-multiple-monitors": "^1.0.1",
+    "sinon": "^1.17.5",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-notifier": "^1.3.0"
+  },
+  "dependencies": {
+    "axios": "^0.14.0",
+    "babel-core": "^6.10.0",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^1.0.0",
+    "forever": "^0.15.0",
+    "http": "*",
+    "httpdispatcher": "^1.0.0",
+    "node-sass": "^3.8.0",
+    "react": "^15.1.0",
+    "react-addons-test-utils": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "react-webpack-rails": "^0.5.0",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0",
+    "rwr-redux": "^0.5.0",
+    "rwr-view-helpers": "^0.1.1",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.0"
+  },
+  "scripts": {
+    "build": "webpack -p --config webpack/production.config.js",
+    "rwr-node-dev-server": "forever forever/development.json",
+    "rwr-node-server": "forever -o log/rwr-server-out.log -e log/rwr-server-err.log forever/production.json",
+    "start": "webpack -w --config webpack/dev.config.js",
+    "start-hot-dev": "webpack-dev-server --hot --inline --config webpack/hot-dev.config.js",
+    "test": "ava app/react/**/*.spec.js"
+  },
+  "license": "",
+  "engines": {
+    "node": ">= 0.10"
+  }
+}

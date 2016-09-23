@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React-Redux-Rails Workshop</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-inverse">
+      <div class="container">
+        <p class="navbar-brand">React Redux Rails Workshop</p>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to 'Home', '/' %>
+          </li>
+          <li>
+            <%= link_to 'Counter', 'counter' %>
+          </li>
+          <li>
+            <%= link_to 'Admin', 'admin' %>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <%= render 'layouts/react_hot_assets' %>
+    <%= yield %>
+  </body>
+</html>
