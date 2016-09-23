@@ -8,10 +8,9 @@ import CounterModifier from 'containers/CounterModifier';
 import UserCreator from 'containers/UserCreator';
 import UserTable from 'containers/UserTable';
 
-import PostCreate from 'components/posts/PostCreate';
+import PostCreator from 'containers/PostCreator';
 
 RWR.run();
-RWR.registerComponent('PostCreate', PostCreate);
 
 integrationsManager
   .register('redux-store', RWRRedux.storeIntegrationWrapper);
@@ -25,3 +24,4 @@ RWRRedux.registerContainer('Counter', Counter);
 RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
+RWRRedux.registerContainer('PostCreator', PostCreator);
