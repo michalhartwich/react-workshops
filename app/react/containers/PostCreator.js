@@ -19,7 +19,19 @@ class PostCreator extends Component {
       <PostForm addPost={this.props.addPost} />
     )
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.posts.length > this.props.posts.length) {
+      document.location = `/posts/${nextProps.posts[0].id}`
+    }
+  }
 }
+
+const mapStateToProps = state => {
+  return {
+    posts: state.posts
+  }
+};
 
 const mapDispatchToProps = dispatch => ({
   addPost({ title, content, author }) {
@@ -32,5 +44,5 @@ PostCreator.propTypes = {
 };
 
 export default connect(
-  null, mapDispatchToProps
+  mapStateToProps, mapDispatchToProps
 )(PostCreator);
