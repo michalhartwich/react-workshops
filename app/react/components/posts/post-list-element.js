@@ -11,9 +11,9 @@ export default class PostListElement extends React.Component {
   render() {
     return (
       <div className="panel panel-default">
-        <div className="panel-heading">{this.props.author}</div>
+        <div className="panel-heading">{this.props.author} - {this.props.title}</div>
         <div className="panel-body">
-          {this.props.title}
+          {this.props.content}
           <div className="pull-right">
             <Button onClick={this.handleDeleteButtonClick.bind(this, this.props.id)}>
               x

@@ -12,6 +12,7 @@ export default class PostListComponent extends React.Component {
               id={post.id}
               author={post.author}
               title={post.title}
+              content={post.content}
               deletePost={this.props.deletePost}
               />
         ))}
