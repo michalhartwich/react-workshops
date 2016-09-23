@@ -4,7 +4,7 @@ import PostListElement from './post-list-element';
 export default class PostListComponent extends React.Component {
 
   render() {
-    var posts = this.props.posts;
+    var posts = this.props.posts || [];
     return (
       <div>
         {posts.map(post => (

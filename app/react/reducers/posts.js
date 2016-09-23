@@ -1,10 +1,10 @@
 export default (state = [], action) => {
   switch (action.type) {
     case 'POSTS_INDEX':
-      return [
+      return {
         ...state,
-        action.posts,
-      ];
+        posts: action.posts,
+      };
     default:
       return state;
   }
