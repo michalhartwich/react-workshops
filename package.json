@@ -51,6 +51,7 @@
     "react": "^15.1.0",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.1.0",
+    "react-link-state": "^0.1.2",
     "react-redux": "^4.4.5",
     "react-webpack-rails": "^0.5.0",
     "redux": "^3.6.0",
