@@ -11,3 +11,7 @@ const createApi = (url) => axios.create({
 export function getPosts() {
   return createApi(BASE_URL).get(`/posts`);
 }
+
+export function deletePost(postId) {
+  return createApi(BASE_URL).delete(`/users/${postId}`);
+}
