@@ -8,7 +8,7 @@ const postsReceived = (posts) => ({
 
 const deletedPost = (post) => ({
   type: postConstants.DELETE,
-  user,
+  post,
 });
 
 export const getPosts = () => dispatch => {

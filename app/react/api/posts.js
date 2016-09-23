@@ -13,5 +13,5 @@ export function getPosts() {
 }
 
 export function deletePost(postId) {
-  return createApi(BASE_URL).delete(`/users/${postId}`);
+  return createApi(BASE_URL).delete(`/posts/${postId}`);
 }
