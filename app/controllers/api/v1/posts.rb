@@ -38,11 +38,11 @@ module API
 
         desc 'Add post'
         params do
-          requires :email, type: String, desc: 'E-mail address'
-          requires :password, type: String, desc: 'Password'
+          requires :author, type: String, desc: 'Author'
+          requires :title, type: String, desc: 'Title'
+          requires :content, type: String, desc: 'Content'
         end
         post do
-          params[:password_confirmation] = params[:password] # YOLO XD
           post = Post.new(params)
           if post.save
             post
