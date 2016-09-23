@@ -9,6 +9,7 @@ import UserCreator from 'containers/UserCreator';
 import UserTable from 'containers/UserTable';
 
 import PostCreator from 'containers/PostCreator';
+import PostPresenter from 'containers/PostPresenter';
 
 RWR.run();
 
@@ -25,3 +26,4 @@ RWRRedux.registerContainer('CounterModifier', CounterModifier);
 RWRRedux.registerContainer('UserCreator', UserCreator);
 RWRRedux.registerContainer('UserTable', UserTable);
 RWRRedux.registerContainer('PostCreator', PostCreator);
+RWRRedux.registerContainer('PostPresenter', PostPresenter);

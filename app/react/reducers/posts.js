@@ -7,7 +7,11 @@ export default (state = [], action) => {
         ...state,
         action.post,
       ]
-
+    case postConstants.GET:
+      return {
+        ...state,
+        post: action.post,
+      }
     default:
       return state;
   }

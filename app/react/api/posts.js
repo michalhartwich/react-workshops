@@ -15,3 +15,7 @@ export function createPost(title, content, author) {
     author,
   });
 }
+
+export function getPost(id) {
+  return createApi(BASE_URL).get(`/posts/${id}`, {});
+}
