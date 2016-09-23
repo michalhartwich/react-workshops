@@ -19,3 +19,11 @@ export function createPost(title, content, author) {
 export function getPost(id) {
   return createApi(BASE_URL).get(`/posts/${id}`, {});
 }
+
+export function getPosts() {
+  return createApi(BASE_URL).get(`/posts`);
+}
+
+export function deletePost(postId) {
+  return createApi(BASE_URL).delete(`/posts/${postId}`);
+}

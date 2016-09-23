@@ -24,3 +24,11 @@
 @import 'components/counter-modifier';
 @import 'components/user-table';
 @import 'components/user-creator';
+
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
