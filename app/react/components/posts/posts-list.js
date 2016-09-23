@@ -8,7 +8,12 @@ export default class PostListComponent extends React.Component {
     return (
       <div>
         {posts.map(post => (
-            <PostListElement author={post.author} title={post.title} />
+            <PostListElement
+              id={post.id}
+              author={post.author}
+              title={post.title}
+              deletePost={this.props.deletePost}
+              />
         ))}
       </div>
     );

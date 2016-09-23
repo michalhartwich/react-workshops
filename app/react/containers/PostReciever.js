@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { getPosts } from 'actions/posts';
+import { getPosts, deletePost } from 'actions/posts';
 
 import PostsList from 'components/posts/posts-list'
 
@@ -12,7 +12,7 @@ class PostReciever extends Component {
 
   render() {
     return (
-      <PostsList posts={this.props.posts} />
+      <PostsList deletePost={this.props.deletePost} posts={this.props.posts} />
     )
   }
 }
@@ -31,6 +31,9 @@ const mapDispatchToProps = dispatch => ({
   getPosts() {
     dispatch(getPosts());
   },
+  deletePost(id) {
+    dispatch(deletePost(id));
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostReciever);
