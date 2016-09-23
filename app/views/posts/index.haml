@@ -1,4 +1,5 @@
 = redux_store 'Store'
 
 .container
+  = link_to "New post", new_post_path, class: "btn btn-primary"
   = redux_container 'PostReciever', store: 'Store'
